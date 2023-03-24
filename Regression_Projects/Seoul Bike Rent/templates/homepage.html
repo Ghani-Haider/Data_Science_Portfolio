@@ -4,9 +4,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Seoul Bike Prediction</title>
 </head>
 <body>
-    <h1>Hello World! Testing</h1>
+    <header>Ghani Haider DS Portfolio</header>
+    <h1>Seoul Bike Rent Prediction</h1>
+    <p>Some information regarding data and the model.</p>
+    <form action="{{url_for('predict')}}" method="post">
+        <div>
+            <!-- hour -->
+            <label for="hour">Hour</label>
+            <input type="number" step="1" min="0" max="23" name="hour" id="hour" placeholder="23" required="required"/>
+        </div>
+        <div>
+            <!-- temperature -->
+            <label for="temperature">Temperature(°C)</label>
+            <input type="number" step="any" name="temperature" id="temperature" placeholder="-5.2" required="required" />
+        </div>
+        <div>
+            <!-- humidity -->
+            <label for="humidity">Humidity (%)</label><br>
+            <input type="number" step="any" name="humidity" id="humidity" placeholder="37" required="required" /><br>
+        </div>
+        <div>
+            <!-- windspeed -->
+            <label for="windspeed">Wind speed (m/s)</label><br>
+            <input type="number" step="any" name="windspeed" id="windspeed" placeholder="2.2" required="required" /><br>
+        </div>
+        <div>
+            <!-- visibility -->
+            <label for="visibility">Visibility (10m)</label><br>
+            <input type="number" step="any" name="visibility" id="visibility" placeholder="2000.0" required="required" /><br>
+        </div>
+        <div>
+            <!-- Solar Radiation -->
+            <label for="solarradiation">Solar Radiation (MJ/m2)</label><br>
+            <input type="number" step="any" name="solarradiation" id="solarradiation" placeholder="0.0" required="required" /><br>
+        </div>
+        <div>
+            <!-- rainfall -->
+            <label for="rainfall">Rainfall (mm)</label><br>
+            <input type="number" step="any" name="rainfall" id="rainfall" placeholder="0.0" required="required" /><br>
+        </div>
+        <div>
+            <!-- snowfall -->
+            <label for="snowfall">Snowfall (cm)</label><br>
+            <input type="number" step="any" name="snowfall" id="snowfall" placeholder="0.0" required="required" /><br>
+        </div>
+        <div>
+            <!-- seasons -->
+            Seasons:
+            <input type="radio" name="seasons" id="winter" value="Winter" checked>
+            <label for="winter">Winter</label>
+            <input type="radio" name="seasons" id="summer" value="Summer">
+            <label for="summer">Summer</label>
+            <input type="radio" name="seasons" id="autumn" value="Autumn">
+            <label for="autumn">Autumn</label>
+            <input type="radio" name="seasons" id="spring" value="Spring">
+            <label for="spring">Spring</label>
+        </div>
+        <div>
+            <!-- holiday -->
+            Holiday:
+            <input type="radio" name="holiday" id="holiday" value="Holiday" checked>
+            <label for="holiday">Holiday</label>
+            <input type="radio" name="holiday" id="no holiday" value="No Holiday">
+            <label for="no holiday">No Holiday</label>
+        </div>
+        <div>
+            <!-- functioning day -->
+            Functioning Day:
+            <input type="radio" name="functioningday" id="functioningday Yes" value="Yes" checked>
+            <label for="functioningday Yes">Yes</label>
+            <input type="radio" name="functioningday" id="functioningday No" value="No">
+            <label for="functioningday No">No</label>
+        </div>
+        <div>
+            <!-- weekday -->
+            Weekday:
+            <input type="radio" name="weekday" id="weekday Yes" value="Yes" checked>
+            <label for="weekday Yes">Yes</label>
+            <input type="radio" name="weekday" id="weekday No" value="No">
+            <label for="weekday No">No</label>
+        </div>
+        <div>
+            <!-- button for prediction -->
+            <button type="submit">Predict</button>
+        </div>
+    </form>
+    {{prediction_txt}}
+    <footer>
+        <p>Made by Ghani Haider &#169; Ghani_Haider_2023</p>
+    </footer>
 </body>
 </html>
