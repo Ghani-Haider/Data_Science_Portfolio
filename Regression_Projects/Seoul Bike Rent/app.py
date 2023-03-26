@@ -24,7 +24,7 @@ def predict():
     # scale and predict
     predicted_val = pipeline.predict(x_input)[0]
     # display the predicted value
-    return render_template('homepage.html', prediction_txt=f"The Predict Value is {predicted_val}")
+    return render_template('homepage.html', prediction_txt=f"The amount of bike rented would be: {predicted_val:.0f}")
 
 
 ### categorical feature encoding to dummmy variables ###
