@@ -26,7 +26,7 @@ This project is an implementation of landscape recognition using deep learning w
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/ghani-haider/
+   git clone https://github.com/Ghani-Haider/Data_Science_Portfolio.git
    ```
 
 2. Navigate to the project directory:
