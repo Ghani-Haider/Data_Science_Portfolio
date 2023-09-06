@@ -1,4 +1,4 @@
-# Landscape Recognition
+# Generating Shakespeare
 
 Implemented transformer based language generation model from scratch with PyTorch using paper *Attention is all you need* to generate a sequence of **characters** given an input. The goal of this project was to generate English conversations in Shakespearean English after training on Shakespeare toy dataset. The project consists of two main scripts: `train.py` and `decoder_transformer.py` which contain the training procedure and model architecture.
 
